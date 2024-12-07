@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="2.263">
+  <testsuite name="HomePage Component" errors="0" failures="0" skipped="0" timestamp="2024-12-08T08:37:38" time="1.877" tests="3">
+    <testcase classname="HomePage Component renders correctly" name="HomePage Component renders correctly" time="0.052" file="src/components/common/__tests__/HomePage.test.tsx">
+    </testcase>
+    <testcase classname="HomePage Component navigates to residents page when Browse Residents button is clicked" name="HomePage Component navigates to residents page when Browse Residents button is clicked" time="0.012" file="src/components/common/__tests__/HomePage.test.tsx">
+    </testcase>
+    <testcase classname="HomePage Component navigates to programs page when Browse Programs button is clicked" name="HomePage Component navigates to programs page when Browse Programs button is clicked" time="0.006" file="src/components/common/__tests__/HomePage.test.tsx">
+    </testcase>
+  </testsuite>
+</testsuites>
