@@ -1,3 +1,7 @@
+### Check the Deployed App - https://residents-programs.netlify.app/
+
+[Watch the Demo Video](https://github.com/user-attachments/assets/584b16b0-5117-4bdd-8573-a0733c1631c8)
+
 # Add Resident and Program Management Application
 
 This is a React-based web application for managing residents and programs, including adding new residents, assigning them to programs, and managing program-related details. It is designed to provide a seamless and user-friendly experience with responsive design and dynamic interactions.
