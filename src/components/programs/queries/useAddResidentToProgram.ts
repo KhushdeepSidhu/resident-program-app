@@ -28,7 +28,7 @@ const useAddResidentToProgram = () => {
                 ? {
                     ...program,
                     attendance: [
-                      ...program.attendance,
+                      ...program.attendance!,
                       {
                         programId: programAttendee.programId,
                         residentId: programAttendee.residentId,
