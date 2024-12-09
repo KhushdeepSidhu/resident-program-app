@@ -29,7 +29,7 @@ const useAddResidentToProgram = () => {
                 ? {
                     ...program,
                     attendance: [
-                      ...program.attendance!,
+                      ...(program.attendance || []),
                       {
                         programId: programAttendee.programId,
                         residentId: programAttendee.residentId,
@@ -50,7 +50,7 @@ const useAddResidentToProgram = () => {
                 ? {
                     ...resident,
                     attendance: [
-                      ...resident.attendance,
+                      ...(resident.attendance || []),
                       {
                         programId: programAttendee.programId,
                         residentId: programAttendee.residentId,

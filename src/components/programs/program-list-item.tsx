@@ -40,7 +40,7 @@ export const ProgramListItem: FunctionComponent<ProgramListItemProps> = ({
   const { id, name, location, dimension } = program;
 
   // Extract the residentIds from the attendance array
-  const attendeeIds = program.attendance.map((a) => a.residentId) || [];
+  const attendeeIds = program.attendance?.map((a) => a.residentId) || [];
 
   // Find matching residents from the residents list
   const attendees = residents.filter((resident) =>

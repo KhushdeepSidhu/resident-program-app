@@ -43,7 +43,7 @@ export const ResidentListItem: FunctionComponent<ResidentListItemProps> = ({
   };
 
   // Extract the programIds from the attendance array
-  const programIds = resident.attendance.map((r) => r.programId);
+  const programIds = resident.attendance?.map((r) => r.programId) || [];
 
   // Find matching programs from the programs list
   const programsAttending = programs.filter((program) =>

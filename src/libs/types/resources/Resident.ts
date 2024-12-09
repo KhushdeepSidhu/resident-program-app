@@ -19,10 +19,10 @@ export type Resident = {
   createdAt: string; // ISO Date string
   updatedAt: string; // ISO Date string
   applicantId: number | null;
-  attendance: Attendance[];
+  attendance?: Attendance[];
 };
 
-export type AddResidentRequest = {
+export type CreateResidentRequest = {
   name: string;
   firstName: string;
   lastName: string;

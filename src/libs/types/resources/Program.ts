@@ -18,10 +18,10 @@ export type Program = {
   };
   isRepeated: boolean;
   applicantId: number | null;
-  attendance: Attendance[];
+  attendance?: Attendance[];
 };
 
-export type AddProgramRequest = {
+export type CreateProgramRequest = {
   name: string;
   location: string;
   allDay: boolean;
