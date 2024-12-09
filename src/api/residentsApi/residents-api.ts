@@ -2,7 +2,10 @@
 import api from '../api';
 
 // Types
-import { Resident } from '../../libs/types/resources/Resident';
+import {
+  AddResidentRequest,
+  Resident,
+} from '../../libs/types/resources/Resident';
 
 export const fetchResidents = async (): Promise<Resident[]> => {
   const token = 'f7de8dc4-953a-457e-bf25-444bacb96a4e';
@@ -13,7 +16,7 @@ export const fetchResidents = async (): Promise<Resident[]> => {
 };
 
 export const createResident = async (
-  newResident: Resident
+  newResident: AddResidentRequest
 ): Promise<Resident> => {
   const token = 'f7de8dc4-953a-457e-bf25-444bacb96a4e';
   const res = await api.post<Resident>(

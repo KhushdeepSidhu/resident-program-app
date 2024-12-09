@@ -6,6 +6,7 @@ import {
   AddResidentToProgramRequest,
   AddResidentToProgramResponse,
 } from '../../../libs/types/resources/Program';
+import { Resident } from '../../../libs/types/resources/Resident';
 
 // API
 import { addResidentToProgram } from '../../../api/programsApi/programs-api';
@@ -37,6 +38,27 @@ const useAddResidentToProgram = () => {
                     ],
                   }
                 : program
+            )
+          : []
+      );
+
+      // Update the resident list
+      queryClient.setQueryData<Resident[]>(['residents'], (oldResidents) =>
+        oldResidents
+          ? oldResidents.map((resident) =>
+              resident.id === programAttendee.residentId
+                ? {
+                    ...resident,
+                    attendance: [
+                      ...resident.attendance,
+                      {
+                        programId: programAttendee.programId,
+                        residentId: programAttendee.residentId,
+                        status: programAttendee.status,
+                      },
+                    ],
+                  }
+                : resident
             )
           : []
       );

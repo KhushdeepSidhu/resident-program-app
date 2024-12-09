@@ -25,18 +25,11 @@ const ResidentListItems: FunctionComponent<ResidentListItemsProps> = ({
       <Grid size={12}>
         <List>
           {residents.map((resident, i) => {
-            // Extract the programIds from the attendance array
-            const programIds = resident.attendance?.map((r) => r.programId);
-
-            // Find matching programs from the programs list
-            const programsAttending = programs.filter((program) =>
-              programIds?.includes(program.id)
-            );
             return (
               <ResidentListItem
                 key={i}
                 resident={resident}
-                programsAttending={programsAttending}
+                programs={programs}
               />
             );
           })}

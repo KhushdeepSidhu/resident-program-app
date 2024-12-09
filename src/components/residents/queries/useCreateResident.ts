@@ -1,7 +1,10 @@
 import { useMutation, useQueryClient } from 'react-query';
 
 // Types
-import { Resident } from '../../../libs/types/resources/Resident';
+import {
+  AddResidentRequest,
+  Resident,
+} from '../../../libs/types/resources/Resident';
 
 // API
 import { createResident } from '../../../api/residentsApi/residents-api';
@@ -10,7 +13,7 @@ import { createResident } from '../../../api/residentsApi/residents-api';
 const useCreateResident = () => {
   const queryClient = useQueryClient();
 
-  return useMutation<Resident, Error, Resident>(createResident, {
+  return useMutation<Resident, Error, AddResidentRequest>(createResident, {
     onSuccess: (newResident: Resident) => {
       // Update the resident list
       queryClient.setQueryData<Resident[]>('residents', (oldResidents) =>

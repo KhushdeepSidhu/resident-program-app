@@ -1,14 +1,14 @@
 export type Program = {
-  id?: number;
-  parentId?: number | null;
+  id: number;
+  parentId: number | null;
   name: string;
   location: string;
   allDay: boolean;
   start: string; // ISO date string
   end: string; // ISO date string
   tags: string[];
-  createdAt?: string; // ISO date string
-  updatedAt?: string; // ISO date string
+  createdAt: string; // ISO date string
+  updatedAt: string; // ISO date string
   dimension: string;
   facilitators: string[];
   levelOfCare: string[];
@@ -17,8 +17,25 @@ export type Program = {
     type: string; // e.g., "Weekly"
   };
   isRepeated: boolean;
-  applicantId?: number | null;
-  attendance?: Attendance[];
+  applicantId: number | null;
+  attendance: Attendance[];
+};
+
+export type AddProgramRequest = {
+  name: string;
+  location: string;
+  allDay: boolean;
+  start: string; // ISO date string
+  end: string; // ISO date string
+  tags: string[];
+  dimension: string;
+  facilitators: string[];
+  levelOfCare: string[];
+  hobbies: string[];
+  recurrence: {
+    type: string; // e.g., "Weekly"
+  };
+  isRepeated: boolean;
 };
 
 export type Attendance = {

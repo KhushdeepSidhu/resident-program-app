@@ -16,8 +16,21 @@ export type Resident = {
   ambulation: string;
   birthDate: string; // ISO Date string
   moveInDate: string; // ISO Date string
-  createdAt?: string; // ISO Date string
-  updatedAt?: string; // ISO Date string
-  applicantId?: number | null;
-  attendance?: Attendance[];
+  createdAt: string; // ISO Date string
+  updatedAt: string; // ISO Date string
+  applicantId: number | null;
+  attendance: Attendance[];
+};
+
+export type AddResidentRequest = {
+  name: string;
+  firstName: string;
+  lastName: string;
+  preferredName: string | null;
+  status: string;
+  room: string;
+  levelOfCare: string;
+  ambulation: string;
+  birthDate: string; // ISO Date string
+  moveInDate: string; // ISO Date string
 };

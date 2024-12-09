@@ -6,6 +6,7 @@ import type {
   Program,
   AddResidentToProgramRequest,
   AddResidentToProgramResponse,
+  AddProgramRequest,
 } from '../../libs/types/resources/Program';
 
 export const fetchPrograms = async (): Promise<Program[]> => {
@@ -16,7 +17,9 @@ export const fetchPrograms = async (): Promise<Program[]> => {
   return res.data;
 };
 
-export const createProgram = async (newProgram: Program): Promise<Program> => {
+export const createProgram = async (
+  newProgram: AddProgramRequest
+): Promise<Program> => {
   const token = 'f7de8dc4-953a-457e-bf25-444bacb96a4e';
   const res = await api.post<Program>(
     'programs',
