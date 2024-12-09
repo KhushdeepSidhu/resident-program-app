@@ -50,3 +50,8 @@ Follow these steps to set up and run the application on your local machine.
    npm run dev-server
    ```
 5. Open the application in your browser at http://localhost:8080.
+
+6. **Run the tests**
+   ```bash
+   npm run test
+   ```
