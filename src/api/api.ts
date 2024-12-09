@@ -1,9 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 const axiosParams: AxiosRequestConfig = {
-  // Set different base URL based on the environment
-  baseURL:
-    process.env.NODE_ENV === 'development' ? 'https://welbi.org/api' : '/',
+  baseURL: 'https://welbi.org/api',
 };
 
 // Create axios instance with default params
